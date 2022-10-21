@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="24dp"
+        android:text="Operar"
+        android:onClick="Operacion"
+        app:layout_constraintEnd_toStartOf="@+id/cbninguna"
+        app:layout_constraintTop_toBottomOf="@+id/cbninguna" />
+
+    <CheckBox
+        android:id="@+id/cbresta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Resta"
+        app:layout_constraintBottom_toTopOf="@+id/cbdivision"
+        app:layout_constraintStart_toStartOf="@+id/cbdivision" />
+
+    <CheckBox
+        android:id="@+id/cbpoten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="51dp"
+        android:layout_marginTop="14dp"
+        android:text="Potencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbmulti" />
+
+    <CheckBox
+        android:id="@+id/cbraiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="14dp"
+        android:text="Raiz"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbmulti" />
+
+    <CheckBox
+        android:id="@+id/cbmulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Multiplicación"
+        app:layout_constraintEnd_toEndOf="@+id/cbraiz"
+        app:layout_constraintStart_toEndOf="@+id/cbraiz"
+        app:layout_constraintTop_toBottomOf="@+id/cbsuma" />
+
+    <CheckBox
+        android:id="@+id/cbdivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="División"
+        app:layout_constraintBottom_toTopOf="@+id/cbpoten"
+        app:layout_constraintStart_toStartOf="@+id/cbpoten" />
+
+    <CheckBox
+        android:id="@+id/cbtodas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Todas"
+        app:layout_constraintStart_toStartOf="@+id/cbraiz"
+        app:layout_constraintTop_toBottomOf="@+id/cbraiz" />
+
+    <CheckBox
+        android:id="@+id/cbninguna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Ninguna"
+        app:layout_constraintStart_toStartOf="@+id/cbpoten"
+        app:layout_constraintTop_toBottomOf="@+id/cbpoten" />
+
+    <CheckBox
+        android:id="@+id/cbsuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Suma"
+        app:layout_constraintStart_toStartOf="@+id/cbmulti"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="42dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="49dp"
+        android:ems="10"
+        android:hint="Ingrese valor"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/tv1"
+        app:layout_constraintEnd_toStartOf="@+id/et2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="Ingrese valor"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et1" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="145dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
